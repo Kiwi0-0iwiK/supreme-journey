@@ -1,0 +1,892 @@
+{
+  "_comment": "GTNH Stargate recipes from NewHorizonsCoreMod PR#1833 + ScriptSGCraft.java (Gate Nerf)",
+  "_source": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1833",
+  "_note": "StargateFramePart / StargateChevron / StargateShieldingFoil recipes are from main branch (pre-nerf, not in PR). EoH outputs (Universium, WDM, BDM) and MagMatter items are treated as raw materials.",
+
+  "recipes": {
+
+    "_comment_bec": "=== BEC (Condensate Assembler) RECIPES (BECRecipes.java) — machine: BEC Network ===",
+    "_note_bec": "nanite_tiers = tier required at each item slot (NOT consumed). Tier 1=Carbon 2=Silver 3=Neutronium 4=TranscendentMetal 5=SixPhasedCopper 6=WDM 7=BDM 8=Universium 9=Eternity 10=MagMatter. Fluids are Entangled Condensates (special fluid form).",
+
+    "StargateMaterialMesh": {
+      "machine": "BEC Network",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 1000000,
+      "output": 1,
+      "_nanite_tiers": [1,2,2,3,3,4,4,5,5,6,6,7,7,8,9,10],
+      "items": [
+        { "item": "stickLong_Infinity",             "amount": 64 },
+        { "item": "stickLong_ProtoHalkonite",       "amount": 64 },
+        { "item": "stickLong_TranscendentMetal",    "amount": 64 },
+        { "item": "longRod_Hypogen",                "amount": 64 },
+        { "item": "stickLong_SuperconductorUMVBase","amount": 64 },
+        { "item": "stickLong_Creon",               "amount": 64 },
+        { "item": "stickLong_Mellion",             "amount": 64 },
+        { "item": "stickLong_Hexanite",            "amount": 64 },
+        { "item": "stickLong_SpaceTime",           "amount": 64 },
+        { "item": "stickLong_Shirabon",            "amount": 64 },
+        { "item": "stickLong_WhiteDwarfMatter",    "amount": 64 },
+        { "item": "stickLong_BlackDwarfMatter",    "amount": 64 },
+        { "item": "stickLong_Universium",          "amount": 64 },
+        { "item": "stickLong_MHDCSM",              "amount": 64 },
+        { "item": "stickLong_Eternity",            "amount": 64 },
+        { "item": "stickLong_MagMatter",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "condensate_QuarkGluonPlasma", "mb": 128000 },
+        { "fluid": "condensate_PhononMedium",     "mb": 32000  },
+        { "fluid": "condensate_MagMatter",        "mb": 512000 },
+        { "fluid": "condensate_Universium",       "mb": 128000 }
+      ]
+    },
+
+    "StargateFramePart": {
+      "machine": "BEC Network",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 4000000,
+      "output": 1,
+      "_nanite_tiers": [3,7,7,2,5,1,8,6,5,9,10,6,2,4,4,3],
+      "items": [
+        { "item": "MetaMaterial_Shielding3",        "amount": 128 },
+        { "item": "MetaMaterial_ElectrograviticValve3","amount": 128 },
+        { "item": "MetaMaterial_EnergyConduit3",    "amount": 256 },
+        { "item": "StargateMaterialMesh",           "amount": 4   }
+      ],
+      "fluids": [
+        { "fluid": "condensate_QuarkGluonPlasma", "mb": 512000  },
+        { "fluid": "condensate_PhononMedium",     "mb": 128000  },
+        { "fluid": "condensate_MagMatter",        "mb": 2048000 },
+        { "fluid": "condensate_Eternity",         "mb": 1024000 }
+      ]
+    },
+
+    "StargateChevron": {
+      "machine": "BEC Network",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 8000000,
+      "output": 1,
+      "_nanite_tiers": [2,2,4,10,1,3,4,3,6,6,7,7,5,5,8,9],
+      "items": [
+        { "item": "EOH_Reinforced_Spatial_Casing",  "amount": 64 },
+        { "item": "EOH_Reinforced_Temporal_Casing", "amount": 64 },
+        { "item": "MetaMaterial_WaveFocus4",        "amount": 64 },
+        { "item": "gemExquisite_Amalgatite",        "amount": 64 },
+        { "item": "frameGt_MagMatter",              "amount": 16 },
+        { "item": "plateSuperdense_MagMatter",      "amount": 8  },
+        { "item": "plateSuperdense_MHDCSM",         "amount": 8  },
+        { "item": "frameGt_MHDCSM",                "amount": 16 },
+        { "item": "MetaMaterial_Shielding3",        "amount": 64 },
+        { "item": "MetaMaterial_Waveguide3",        "amount": 64 },
+        { "item": "MetaMaterial_EnergyConduit3",    "amount": 64 },
+        { "item": "MetaMaterial_ElectrograviticValve3","amount": 64 },
+        { "item": "Electric_Piston_UXV",            "amount": 64 },
+        { "item": "Robot_Arm_UXV",                  "amount": 64 },
+        { "item": "Field_Generator_UXV",            "amount": 32 },
+        { "item": "circuit_MAX",                    "amount": 32 }
+      ],
+      "fluids": [
+        { "fluid": "condensate_QuarkGluonPlasma", "mb": 1024000 },
+        { "fluid": "condensate_PhononMedium",     "mb": 256000  },
+        { "fluid": "condensate_MagMatter",        "mb": 4096000 },
+        { "fluid": "condensate_Eternity",         "mb": 2048000 }
+      ]
+    },
+
+    "StargateShieldingFoil": {
+      "machine": "BEC Network",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 8000000,
+      "output": 1,
+      "_nanite_tiers": [7,6,5,5,3,3,2,2,9,4,4,1,6,7,8,10],
+      "items": [
+        { "item": "StabilisationFieldGeneratorTier8",      "amount": 64 },
+        { "item": "HarmonicPhononTransmissionConduit",     "amount": 64 },
+        { "item": "SuperconductivePlasmaEnergyConduit",    "amount": 64 },
+        { "item": "FineStructureConstantManipulator",      "amount": 64 },
+        { "item": "plateSuperdense_Eternity",              "amount": 16 },
+        { "item": "plateSuperdense_Universium",            "amount": 8  },
+        { "item": "plateSuperdense_MHDCSM",                "amount": 8  },
+        { "item": "plateSuperdense_SpaceTime",             "amount": 16 },
+        { "item": "circuit_MAX",                           "amount": 16 },
+        { "item": "Sensor_UXV",                            "amount": 32 },
+        { "item": "Emitter_UXV",                           "amount": 32 },
+        { "item": "combined_singularity_15",               "amount": 64 },
+        { "item": "nanite_WhiteDwarfMatter",               "amount": 16 },
+        { "item": "nanite_BlackDwarfMatter",               "amount": 16 },
+        { "item": "nanite_Universium",                     "amount": 16 },
+        { "item": "nanite_MagMatter",                      "amount": 16 }
+      ],
+      "fluids": [
+        { "fluid": "condensate_QuarkGluonPlasma", "mb": 1024000 },
+        { "fluid": "condensate_PhononMedium",     "mb": 256000  },
+        { "fluid": "condensate_MagMatter",        "mb": 4096000 },
+        { "fluid": "condensate_MHDCSM",           "mb": 1024000 }
+      ]
+    },
+
+    "_comment_nanite": "=== NANO FORGE RECIPES (NaniteChain.java) — machine: Nano Forge ===",
+
+    "nanite_WhiteDwarfMatter": {
+      "machine": "Nano Forge",
+      "nano_forge_tier": 3,
+      "eu_per_tick": "MAX (2B)",
+      "duration_seconds": 750,
+      "output": 4,
+      "items": [
+        { "item": "lens_UMV",                          "amount": 1 },
+        { "item": "lens_QuantumAnomaly_Werkstoff36",   "amount": 1 },
+        { "item": "Laser_Lens_Special",                "amount": 1 },
+        { "item": "block_WhiteDwarfMatter",            "amount": 8 },
+        { "item": "Circuit_Chip_APIC",                 "amount": 64 },
+        { "item": "Circuit_Parts_Crystal_Chip_Wetware","amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "UUMatter",     "mb": 500000 },
+        { "fluid": "RawStarMatter","mb": 50000  },
+        { "fluid": "Space_molten", "mb": 5000   }
+      ]
+    },
+
+    "nanite_BlackDwarfMatter": {
+      "machine": "Nano Forge",
+      "nano_forge_tier": 3,
+      "eu_per_tick": "MAX (2B)",
+      "duration_seconds": 750,
+      "output": 4,
+      "items": [
+        { "item": "lens_UMV",                          "amount": 1 },
+        { "item": "lens_QuantumAnomaly_Werkstoff36",   "amount": 1 },
+        { "item": "Laser_Lens_Special",                "amount": 1 },
+        { "item": "block_BlackDwarfMatter",            "amount": 8 },
+        { "item": "Circuit_Chip_APIC",                 "amount": 64 },
+        { "item": "Circuit_Parts_Crystal_Chip_Wetware","amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "UUMatter",     "mb": 500000 },
+        { "fluid": "RawStarMatter","mb": 50000  },
+        { "fluid": "Time_molten",  "mb": 5000   }
+      ]
+    },
+
+    "nanite_Universium": {
+      "machine": "Nano Forge",
+      "nano_forge_tier": 3,
+      "eu_per_tick": "MAX (2B)",
+      "duration_seconds": 750,
+      "output": 2,
+      "items": [
+        { "item": "lens_UMV",                          "amount": 1 },
+        { "item": "lens_QuantumAnomaly_Werkstoff36",   "amount": 1 },
+        { "item": "Laser_Lens_Special",                "amount": 1 },
+        { "item": "block_Universium",                  "amount": 8 },
+        { "item": "Circuit_Chip_APIC",                 "amount": 64 },
+        { "item": "Circuit_Parts_Chip_Bioware",        "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "SpaceTime_molten",  "mb": 1000  },
+        { "fluid": "Infinity_molten",   "mb": 4000  },
+        { "fluid": "PrimordialMatter",  "mb": 64000 }
+      ]
+    },
+
+    "nanite_MagMatter": {
+      "machine": "Nano Forge",
+      "nano_forge_tier": 4,
+      "eu_per_tick": "MAX (2B)",
+      "duration_seconds": 1000,
+      "output": 1,
+      "items": [
+        { "item": "lens_Forcicium",    "amount": 1 },
+        { "item": "lens_Forcillium",   "amount": 1 },
+        { "item": "nanite_Universium", "amount": 1 },
+        { "item": "block_MagMatter",   "amount": 8 },
+        { "item": "Circuit_Chip_YPIC", "amount": 64 },
+        { "item": "circuit_MAX",       "amount": 1 }
+      ],
+      "fluids": [
+        { "fluid": "QuarkGluonPlasma", "mb": 100000 },
+        { "fluid": "PhononMedium",     "mb": 64000  },
+        { "fluid": "PrimordialMatter", "mb": 128000 }
+      ]
+    },
+
+    "NanoCircuitOrigin": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UEV",
+      "duration_seconds": 400,
+      "output": 1,
+      "items": [
+        { "item": "frameGt_Tritanium",            "amount": 8  },
+        { "item": "Circuit_Biomainframe",          "amount": 2  },
+        { "item": "Circuit_Parts_CapacitorASMD",   "amount": 32 },
+        { "item": "Circuit_Parts_ResistorASMD",    "amount": 32 },
+        { "item": "Circuit_Parts_TransistorASMD",  "amount": 32 },
+        { "item": "Circuit_Parts_DiodeASMD",       "amount": 32 },
+        { "item": "Circuit_Chip_Ram",              "amount": 64 },
+        { "item": "Circuit_Chip_NPIC",             "amount": 64 },
+        { "item": "wireGt01_Draconium",            "amount": 64 },
+        { "item": "wireGt02_SuperconductorUHV",    "amount": 64 },
+        { "item": "foil_AnySyntheticRubber",       "amount": 64 },
+        { "item": "foil_Polybenzimidazole",        "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "SolderingAlloy",       "mb": 3744  },
+        { "fluid": "Naquadria",            "mb": 4032  },
+        { "fluid": "IC2_Coolant",          "mb": 20000 }
+      ]
+    },
+
+    "GatePlateOrigin": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UHV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "eternal_singularity",    "amount": 1  },
+        { "item": "Sensor_UV",              "amount": 16 },
+        { "item": "block_Infinity",         "amount": 16 },
+        { "item": "block_CosmicNeutronium", "amount": 16 },
+        { "item": "block_NaquadahAlloy",    "amount": 192 },
+        { "item": "NanoCircuitOrigin",      "amount": 16 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",              "mb": 36864 },
+        { "fluid": "Tritanium",               "mb": 36864 },
+        { "fluid": "SuperconductorZPMBase",   "mb": 36864 },
+        { "fluid": "Silver_Plasma",           "mb": 36864 }
+      ]
+    },
+
+    "ChevronOrigin": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UHV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "Electric_Piston_UV",   "amount": 16 },
+        { "item": "Electric_Motor_UV",    "amount": 64 },
+        { "item": "block_Infinity",       "amount": 16 },
+        { "item": "block_NaquadahAlloy",  "amount": 64 },
+        { "item": "block_NetherStar",     "amount": 16 },
+        { "item": "plateDense_Ardite",    "amount": 24 },
+        { "item": "gemExquisite_Ruby",    "amount": 64 },
+        { "item": "gemExquisite_Jasper",  "amount": 64 },
+        { "item": "NanoCircuitOrigin",    "amount": 32 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 9216 },
+        { "fluid": "Tritanium",             "mb": 9216 },
+        { "fluid": "SuperconductorZPMBase", "mb": 9216 },
+        { "fluid": "Silver_Plasma",         "mb": 9216 }
+      ]
+    },
+
+    "FramePartOrigin": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UHV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "stickLong_Infinity",        "amount": 64 },
+        { "item": "stickLong_NaquadahAlloy",   "amount": 64 },
+        { "item": "stickLong_CosmicNeutronium","amount": 64 },
+        { "item": "stickLong_Neutronium",      "amount": 64 },
+        { "item": "stickLong_Osmiridium",      "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium", "mb": 73728 },
+        { "fluid": "Tritanium",  "mb": 73728 },
+        { "fluid": "Concrete",   "mb": 73728 }
+      ]
+    },
+
+    "PikoCircuitPolychrome": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UEV",
+      "duration_seconds": 500,
+      "output": 1,
+      "items": [
+        { "item": "Circuit_Board_Bio_Ultra",      "amount": 1  },
+        { "item": "PicoWafer",                    "amount": 4  },
+        { "item": "NanoCircuitOrigin",            "amount": 2  },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 48 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 48 },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 48 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 48 },
+        { "item": "Circuit_Chip_PPIC",            "amount": 64 },
+        { "item": "foil_NiobiumTitanium",         "amount": 16 },
+        { "item": "bolt_Osmium",                  "amount": 32 },
+        { "item": "bolt_Neutronium",              "amount": 16 },
+        { "item": "wireFine_Lanthanum",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "SolderingAlloy", "mb": 3744 },
+        { "fluid": "UUMatter",       "mb": 8000 },
+        { "fluid": "Osmium",         "mb": 1152 }
+      ]
+    },
+
+    "QuantumCircuitPolychrome": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UIV",
+      "duration_seconds": 1000,
+      "output": 1,
+      "items": [
+        { "item": "frameGt_Neutronium",           "amount": 16 },
+        { "item": "PikoCircuitPolychrome",         "amount": 2  },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 64 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 64 },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 64 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 64 },
+        { "item": "Circuit_Chip_QPIC",            "amount": 64 },
+        { "item": "foil_NiobiumTitanium",         "amount": 64 },
+        { "item": "bolt_Indium",                  "amount": 64 },
+        { "item": "wireGt01_Bedrockium",          "amount": 8  },
+        { "item": "wireFine_Lanthanum",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "SolderingAlloy", "mb": 3744  },
+        { "fluid": "UUMatter",       "mb": 24000 },
+        { "fluid": "Osmium",         "mb": 2304  }
+      ]
+    },
+
+    "GatePlatePolychrome": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UIV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "eternal_singularity",    "amount": 1  },
+        { "item": "Sensor_UEV",             "amount": 16 },
+        { "item": "block_Infinity",         "amount": 16 },
+        { "item": "block_CosmicNeutronium", "amount": 16 },
+        { "item": "block_NaquadahAlloy",    "amount": 192 },
+        { "item": "QuantumCircuitPolychrome","amount": 16 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 36864 },
+        { "fluid": "Tritanium",             "mb": 36864 },
+        { "fluid": "SuperconductorUHVBase", "mb": 36864 },
+        { "fluid": "Silver_Plasma",         "mb": 36864 }
+      ]
+    },
+
+    "ChevronPolychrome": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UIV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "Electric_Piston_UEV",        "amount": 16 },
+        { "item": "Electric_Motor_UEV",          "amount": 64 },
+        { "item": "block_Infinity",              "amount": 16 },
+        { "item": "block_NaquadahAlloy",         "amount": 64 },
+        { "item": "block_NetherStar",            "amount": 16 },
+        { "item": "plateDense_Ardite",           "amount": 24 },
+        { "item": "gemExquisite_Ruby",           "amount": 64 },
+        { "item": "gemExquisite_Jasper",         "amount": 64 },
+        { "item": "QuantumCircuitPolychrome",    "amount": 32 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 9216 },
+        { "fluid": "Tritanium",             "mb": 9216 },
+        { "fluid": "SuperconductorUHVBase", "mb": 9216 },
+        { "fluid": "Silver_Plasma",         "mb": 9216 }
+      ]
+    },
+
+    "FramePartPolychrome": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UIV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "stickLong_Infinity",        "amount": 64 },
+        { "item": "stickLong_NaquadahAlloy",   "amount": 64 },
+        { "item": "stickLong_CosmicNeutronium","amount": 64 },
+        { "item": "stickLong_Neutronium",      "amount": 64 },
+        { "item": "stickLong_Osmiridium",      "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium", "mb": 73728 },
+        { "fluid": "Tritanium",  "mb": 73728 },
+        { "fluid": "Concrete",   "mb": 73728 }
+      ]
+    },
+
+    "NanoCircuit": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UIV",
+      "duration_seconds": 400,
+      "output": 1,
+      "items": [
+        { "item": "frameGt_Tritanium",            "amount": 8  },
+        { "item": "Circuit_Biomainframe",          "amount": 2  },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 32 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 32 },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 32 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 32 },
+        { "item": "Circuit_Chip_Ram",             "amount": 64 },
+        { "item": "Circuit_Chip_NPIC",            "amount": 64 },
+        { "item": "wireGt01_Draconium",           "amount": 64 },
+        { "item": "wireGt02_SuperconductorUHV",   "amount": 64 },
+        { "item": "foil_AnySyntheticRubber",      "amount": 64 },
+        { "item": "foil_Polybenzimidazole",       "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "MutatedLivingSolder", "mb": 3744  },
+        { "fluid": "Naquadria",           "mb": 4032  },
+        { "fluid": "IC2_Coolant",         "mb": 20000 }
+      ]
+    },
+
+    "PikoCircuitDimensional": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UMV",
+      "duration_seconds": 500,
+      "output": 1,
+      "items": [
+        { "item": "Circuit_Board_Bio_Ultra",      "amount": 1  },
+        { "item": "PicoWafer",                    "amount": 4  },
+        { "item": "NanoCircuit",                  "amount": 2  },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 48 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 48 },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 48 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 48 },
+        { "item": "Circuit_Chip_PPIC",            "amount": 64 },
+        { "item": "foil_NiobiumTitanium",         "amount": 16 },
+        { "item": "bolt_Osmium",                  "amount": 32 },
+        { "item": "bolt_Neutronium",              "amount": 16 },
+        { "item": "wireFine_Lanthanum",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "MutatedLivingSolder", "mb": 3744 },
+        { "fluid": "UUMatter",            "mb": 8000 },
+        { "fluid": "Osmium",              "mb": 1152 }
+      ]
+    },
+
+    "QuantumCircuitDimensional": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 1000,
+      "output": 1,
+      "items": [
+        { "item": "frameGt_Neutronium",           "amount": 16 },
+        { "item": "PikoCircuitDimensional",        "amount": 2  },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 64 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 64 },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 64 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 64 },
+        { "item": "Circuit_Chip_QPIC",            "amount": 64 },
+        { "item": "foil_NiobiumTitanium",         "amount": 64 },
+        { "item": "bolt_Indium",                  "amount": 64 },
+        { "item": "wireGt01_SpaceTime",           "amount": 8  },
+        { "item": "wireFine_Lanthanum",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "MutatedLivingSolder", "mb": 3744  },
+        { "fluid": "UUMatter",            "mb": 24000 },
+        { "fluid": "Osmium",              "mb": 2304  }
+      ]
+    },
+
+    "GatePlateDimensional": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "Casing_Dim_Bridge",          "amount": 64  },
+        { "item": "block_Infinity",             "amount": 192 },
+        { "item": "block_SpaceTime",            "amount": 16  },
+        { "item": "QuantumCircuitDimensional",  "amount": 16  },
+        { "item": "plateDense_SpaceTime",       "amount": 16  },
+        { "item": "plateDense_Infinity",        "amount": 16  },
+        { "item": "Sensor_UMV",                 "amount": 16  },
+        { "item": "Emitter_UMV",                "amount": 16  },
+        { "item": "eternal_singularity",        "amount": 16  }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 32768000 },
+        { "fluid": "SpaceTime",             "mb": 147456   },
+        { "fluid": "SuperconductorUMVBase", "mb": 147456   },
+        { "fluid": "ExcitedDTEC",           "mb": 147456   }
+      ]
+    },
+
+    "ChevronDimensional": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "block_Infinity",         "amount": 64 },
+        { "item": "block_NaquadahAlloy",    "amount": 64 },
+        { "item": "Casing_Dim_Bridge",      "amount": 128 },
+        { "item": "frameGt_SpaceTime",      "amount": 16 },
+        { "item": "frameGt_Infinity",       "amount": 16 },
+        { "item": "gemExquisite_Ruby",      "amount": 16 },
+        { "item": "gemExquisite_Jasper",    "amount": 16 },
+        { "item": "gemExquisite_Opal",      "amount": 16 },
+        { "item": "gemExquisite_Sapphire",  "amount": 16 },
+        { "item": "plateDense_Osmiridium",  "amount": 16 },
+        { "item": "Electric_Motor_UMV",     "amount": 64 },
+        { "item": "Electric_Piston_UMV",    "amount": 64 },
+        { "item": "Field_Generator_UMV",    "amount": 16 },
+        { "item": "QuantumCircuitDimensional","amount": 32 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 32768000 },
+        { "fluid": "SpaceTime",             "mb": 147456   },
+        { "fluid": "SuperconductorUMVBase", "mb": 147456   },
+        { "fluid": "ExcitedDTEC",           "mb": 147456   }
+      ]
+    },
+
+    "FramePartDimensional": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 3600,
+      "output": 1,
+      "items": [
+        { "item": "stickLong_Infinity",             "amount": 64 },
+        { "item": "stickLong_SpaceTime",            "amount": 64 },
+        { "item": "stickLong_NaquadahAlloy",        "amount": 64 },
+        { "item": "stickLong_CosmicNeutronium",     "amount": 64 },
+        { "item": "stickLong_Neutronium",           "amount": 64 },
+        { "item": "stickLong_Osmiridium",           "amount": 64 },
+        { "item": "stickLong_Californium",          "amount": 64 },
+        { "item": "longRod_Quantum",                "amount": 64 },
+        { "item": "longRod_Hypogen",                "amount": 64 },
+        { "item": "longRod_CelestialTungsten",      "amount": 64 },
+        { "item": "stickLong_Tairitsu",             "amount": 64 },
+        { "item": "longRod_AstralTitanium",         "amount": 64 },
+        { "item": "stickLong_SuperconductorUMVBase","amount": 64 },
+        { "item": "stickLong_Sunnarium",            "amount": 64 },
+        { "item": "longRod_Abyssal",                "amount": 64 },
+        { "item": "stickLong_TranscendentMetal",    "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 32768000 },
+        { "fluid": "SpaceTime",             "mb": 147456   },
+        { "fluid": "SuperconductorUMVBase", "mb": 147456   },
+        { "fluid": "ExcitedDTEC",           "mb": 147456   }
+      ]
+    },
+
+    "QuantumCircuitHeavenly": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UXV",
+      "duration_seconds": 1000,
+      "output": 1,
+      "items": [
+        { "item": "frameGt_Neutronium",           "amount": 16 },
+        { "item": "PikoCircuitDimensional",        "amount": 2  },
+        { "item": "Circuit_Parts_CapacitorXSMD",  "amount": 64 },
+        { "item": "Circuit_Parts_DiodeXSMD",      "amount": 64 },
+        { "item": "Circuit_Parts_TransistorXSMD", "amount": 64 },
+        { "item": "Circuit_Parts_ResistorXSMD",   "amount": 64 },
+        { "item": "Circuit_Chip_QPIC",            "amount": 64 },
+        { "item": "foil_NiobiumTitanium",         "amount": 64 },
+        { "item": "bolt_Indium",                  "amount": 64 },
+        { "item": "wireGt01_SpaceTime",           "amount": 8  },
+        { "item": "wireFine_Lanthanum",           "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "MutatedLivingSolder", "mb": 3744  },
+        { "fluid": "UUMatter",            "mb": 24000 },
+        { "fluid": "Osmium",              "mb": 2304  }
+      ]
+    },
+
+    "GatePlateHarmonic": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UMV",
+      "duration_seconds": 125000,
+      "output": 1,
+      "items": [
+        { "item": "Casing_Dim_Bridge",          "amount": 64 },
+        { "item": "StabilisationFieldGenerator8","amount": 64 },
+        { "item": "block_Shirabon",             "amount": 128},
+        { "item": "block_SpaceTime",            "amount": 64 },
+        { "item": "QuantumCircuitHeavenly",     "amount": 16 },
+        { "item": "plateDense_SpaceTime",       "amount": 8  },
+        { "item": "plateDense_Universium",      "amount": 8  },
+        { "item": "plateDense_Infinity",        "amount": 8  },
+        { "item": "plateDense_Shirabon",        "amount": 8  },
+        { "item": "Sensor_UXV",                 "amount": 16 },
+        { "item": "Emitter_UXV",                "amount": 16 },
+        { "item": "eternal_singularity",        "amount": 16 },
+        { "item": "Nanite_Universium",          "amount": 16 },
+        { "item": "Nanite_BlackDwarfMatter",    "amount": 16 },
+        { "item": "Nanite_WhiteDwarfMatter",    "amount": 16 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 32768000 },
+        { "fluid": "SpaceTime",             "mb": 147456   },
+        { "fluid": "SuperconductorUMVBase", "mb": 147456   },
+        { "fluid": "ExcitedDTEC",           "mb": 147456   }
+      ]
+    },
+
+    "ChevronHarmonic": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UMV",
+      "duration_seconds": 125000,
+      "output": 1,
+      "items": [
+        { "item": "block_TranscendentMetal",    "amount": 64 },
+        { "item": "block_Shirabon",             "amount": 64 },
+        { "item": "EOH_Reinforced_Spatial_Casing","amount": 128},
+        { "item": "frameGt_SpaceTime",          "amount": 16 },
+        { "item": "frameGt_MHDCSM",             "amount": 16 },
+        { "item": "gemExquisite_Ruby",          "amount": 16 },
+        { "item": "gemExquisite_Jasper",        "amount": 16 },
+        { "item": "gemExquisite_Opal",          "amount": 16 },
+        { "item": "gemExquisite_Sapphire",      "amount": 16 },
+        { "item": "plateDense_MHDCSM",          "amount": 8  },
+        { "item": "plateDense_Shirabon",        "amount": 8  },
+        { "item": "Electric_Motor_UXV",         "amount": 64 },
+        { "item": "Electric_Piston_UXV",        "amount": 64 },
+        { "item": "Field_Generator_UXV",        "amount": 16 },
+        { "item": "QuantumCircuitHeavenly",     "amount": 32 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",            "mb": 32768000 },
+        { "fluid": "SpaceTime",             "mb": 147456   },
+        { "fluid": "MHDCSM",                "mb": 36864    },
+        { "fluid": "ExcitedDTEC",           "mb": 147456   }
+      ]
+    },
+
+    "_comment_set": "=== FULL STARGATE SET (meta-recipe for one complete working gate) ===",
+
+    "FullStargateSet": {
+      "machine": "META",
+      "output": 1,
+      "_note": "1x Base + 8x RingBlock + 7x ChevronBlock + 1x Controller + 1x RFPowerUnit + 1x ChevronUpgrade + 1x IrisUpgrade",
+      "items": [
+        { "item": "StargateBase",           "amount": 1 },
+        { "item": "StargateRingBlock",      "amount": 8 },
+        { "item": "StargateChevronBlock",   "amount": 7 },
+        { "item": "StargateController",     "amount": 1 },
+        { "item": "StargatePowerUnit_RF",   "amount": 1 },
+        { "item": "StargateChevronUpgrade", "amount": 1 },
+        { "item": "StargateIrisUpgrade",    "amount": 1 }
+      ],
+      "fluids": []
+    },
+
+    "_comment_ec": "=== EXTREME CRAFTING (9x9 grid, Avaritia) — ScriptSGCraft.java ===",
+
+    "StargateRingBlock": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "FieldEnergyAbsorberCasing",    "amount": 10 },
+        { "item": "block_MagMatter",              "amount": 5  },
+        { "item": "block_DarkMatter",             "amount": 9  },
+        { "item": "StargateFramePart",            "amount": 19 },
+        { "item": "StargateChevron",              "amount": 3  },
+        { "item": "StargateShieldingFoil",        "amount": 11 },
+        { "item": "Field_Generator_UXV",          "amount": 9  },
+        { "item": "MetaMaterial_Waveguide3",      "amount": 2  },
+        { "item": "PrecisionFieldSyncCasing",     "amount": 3  }
+      ],
+      "fluids": []
+    },
+
+    "StargateChevronUpgrade": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "plateSuperdense_MagMatter",    "amount": 22 },
+        { "item": "StargateFramePart",            "amount": 15 },
+        { "item": "StargateChevron",              "amount": 4  },
+        { "item": "Electric_Piston_UXV",          "amount": 3  },
+        { "item": "Sensor_UXV",                   "amount": 1  },
+        { "item": "Emitter_UXV",                  "amount": 1  },
+        { "item": "Field_Generator_UXV",          "amount": 2  },
+        { "item": "MetaMaterial_Waveguide3",      "amount": 2  }
+      ],
+      "fluids": []
+    },
+
+    "StargateChevronBlock": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "StargateShieldingFoil",        "amount": 18 },
+        { "item": "FieldEnergyAbsorberCasing",    "amount": 8  },
+        { "item": "PrecisionFieldSyncCasing",     "amount": 4  },
+        { "item": "block_MagMatter",              "amount": 4  },
+        { "item": "block_DarkMatter",             "amount": 8  },
+        { "item": "MetaMaterial_Waveguide3",      "amount": 4  },
+        { "item": "Field_Generator_UXV",          "amount": 4  },
+        { "item": "GravitonFlowModulatorTier3",   "amount": 4  },
+        { "item": "StargateChevronUpgrade",       "amount": 4  },
+        { "item": "StargateRingBlock",            "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "StargateBase": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "Transdimensional_Alignment_Matrix", "amount": 4  },
+        { "item": "StargateShieldingFoil",             "amount": 16 },
+        { "item": "MetaMaterial_EnergyConduit3",       "amount": 4  },
+        { "item": "nanite_MagMatter",                  "amount": 4  },
+        { "item": "GravitonFlowModulatorTier3",        "amount": 4  },
+        { "item": "StargateChevronBlock",              "amount": 8  },
+        { "item": "Magnetic_Chassis_T3_ExoFoundry",    "amount": 16 },
+        { "item": "MiningDroneUXV",                    "amount": 2  },
+        { "item": "ZPM6",                              "amount": 4  },
+        { "item": "AE2_UniverseStorageCell",           "amount": 1  },
+        { "item": "AstralArrayFabricator",             "amount": 6  },
+        { "item": "Universal_Collapser_ExoFoundry",    "amount": 4  },
+        { "item": "MetaMaterial_ElectrograviticValve3","amount": 4  },
+        { "item": "SpaceElevatorModuleAssemblerT3",    "amount": 2  },
+        { "item": "StargateCrystal",                   "amount": 1  },
+        { "item": "AE2_UniverseFluidCell",             "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "StargateCapacitor": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "StargateShieldingFoil",             "amount": 14 },
+        { "item": "StellarEnergySiphonCasing",         "amount": 8  },
+        { "item": "Magnetic_Chassis_T3_ExoFoundry",    "amount": 4  },
+        { "item": "Field_Generator_UXV",               "amount": 4  },
+        { "item": "EnderIO_ChaoticCapacitor",          "amount": 10 },
+        { "item": "LSC_LapotronicUnit_UMV",            "amount": 9  },
+        { "item": "LSC_Block",                         "amount": 1  },
+        { "item": "eM_WirelessEnergyTunnel9_UXV",      "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "StargateIrisBlade": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "plateSuperdense_WhiteDwarfMatter",  "amount": 26 },
+        { "item": "plateSuperdense_BlackDwarfMatter",  "amount": 7  },
+        { "item": "plateSuperdense_MagMatter",         "amount": 12 },
+        { "item": "Electric_Piston_UXV",               "amount": 4  },
+        { "item": "ZPM6",                              "amount": 1  },
+        { "item": "CondensateTransformativeCoil",      "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "StargateIrisUpgrade": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "FieldEnergyAbsorberCasing",         "amount": 12 },
+        { "item": "StargateIrisBlade",                 "amount": 24 },
+        { "item": "block_DarkMatter",                  "amount": 4  },
+        { "item": "nanite_MagMatter",                  "amount": 12 },
+        { "item": "Magnetic_Chassis_T3_ExoFoundry",    "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "StargatePowerUnit_RF": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "FieldEnergyAbsorberCasing",         "amount": 18 },
+        { "item": "CondensateTransformativeCoil",      "amount": 10 },
+        { "item": "PrecisionFieldSyncCasing",          "amount": 3  },
+        { "item": "block_DarkMatter",                  "amount": 6  },
+        { "item": "nanite_MagMatter",                  "amount": 6  },
+        { "item": "Magnetic_Chassis_T3_ExoFoundry",    "amount": 11 },
+        { "item": "StargateCapacitor",                 "amount": 4  },
+        { "item": "MetaMaterial_ResonanceChamber4",    "amount": 2  },
+        { "item": "StargateRingBlock",                 "amount": 1  },
+        { "item": "ZPM6",                              "amount": 1  },
+        { "item": "GigaChad",                          "amount": 2  }
+      ],
+      "fluids": []
+    },
+
+    "StargateOCInterface": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "FieldEnergyAbsorberCasing",         "amount": 18 },
+        { "item": "CondensateTransformativeCoil",      "amount": 10 },
+        { "item": "PrecisionFieldSyncCasing",          "amount": 3  },
+        { "item": "block_DarkMatter",                  "amount": 6  },
+        { "item": "nanite_MagMatter",                  "amount": 6  },
+        { "item": "Magnetic_Chassis_T3_ExoFoundry",    "amount": 11 },
+        { "item": "AE2_SingularityCraftingStorage",    "amount": 4  },
+        { "item": "MetaMaterial_EnergyConduit3",       "amount": 2  },
+        { "item": "StargateRingBlock",                 "amount": 1  },
+        { "item": "TecTech_DataIn_WirelessHatch",      "amount": 1  },
+        { "item": "GigaChad",                          "amount": 2  }
+      ],
+      "fluids": []
+    },
+
+    "StargateController": {
+      "machine": "Extreme Crafting",
+      "output": 1,
+      "items": [
+        { "item": "PrecisionFieldSyncCasing",          "amount": 9  },
+        { "item": "FieldEnergyAbsorberCasing",         "amount": 6  },
+        { "item": "block_DarkMatter",                  "amount": 4  },
+        { "item": "OC_Keyboard",                       "amount": 8  },
+        { "item": "StargateFramePart",                 "amount": 8  },
+        { "item": "StargateShieldingFoil",             "amount": 6  },
+        { "item": "StargateControllerCrystal",         "amount": 1  },
+        { "item": "MetaMaterial_FieldManipulator4",    "amount": 2  },
+        { "item": "ArithmeticSingularity",             "amount": 1  },
+        { "item": "Field_Generator_UXV",               "amount": 1  },
+        { "item": "ZPM6",                              "amount": 1  },
+        { "item": "StargateOCInterface",               "amount": 1  },
+        { "item": "AE2_UniverseFluidCell",             "amount": 1  }
+      ],
+      "fluids": []
+    },
+
+    "FramePartHarmonic": {
+      "machine": "Assembly Line",
+      "eu_per_tick": "UMV",
+      "duration_seconds": 125000,
+      "output": 1,
+      "items": [
+        { "item": "stickLong_Infinity",             "amount": 64 },
+        { "item": "stickLong_SpaceTime",            "amount": 64 },
+        { "item": "stickLong_MHDCSM",               "amount": 64 },
+        { "item": "stickLong_Neutronium",           "amount": 64 },
+        { "item": "stickLong_Osmiridium",           "amount": 64 },
+        { "item": "stickLong_Shirabon",             "amount": 64 },
+        { "item": "longRod_Tairitsu",               "amount": 64 },
+        { "item": "longRod_Quantum",                "amount": 64 },
+        { "item": "longRod_Hypogen",                "amount": 64 },
+        { "item": "longRod_CelestialTungsten",      "amount": 64 },
+        { "item": "longRod_Mhdcsm2",               "amount": 64 },
+        { "item": "longRod_AstralTitanium",         "amount": 64 },
+        { "item": "stickLong_SuperconductorUMVBase","amount": 64 },
+        { "item": "stickLong_Universium",           "amount": 64 },
+        { "item": "longRod_Abyssal",                "amount": 64 },
+        { "item": "stickLong_TranscendentMetal",    "amount": 64 }
+      ],
+      "fluids": [
+        { "fluid": "Neutronium",  "mb": 32768000 },
+        { "fluid": "SpaceTime",   "mb": 147456   },
+        { "fluid": "Universium",  "mb": 147456   },
+        { "fluid": "ExcitedDTEC", "mb": 147456   }
+      ]
+    }
+  }
+}
