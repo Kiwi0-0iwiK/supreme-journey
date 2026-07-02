@@ -20,4 +20,4 @@
 
 ## 相關資源
 
-- 專案程式碼：`D:\AIWorkplace\Claude\gtnh-stargate-calc\`
+- 專案程式碼：已整合進本資料夾（`calc.py`、`recipes.json`）
