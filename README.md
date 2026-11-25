@@ -11,9 +11,11 @@ CS/IE student — documenting my learning journey and side projects.
 
 ## Learning Notes
 
+- [Repo Reading Notes](learning/repos/README.md) — One note per GitHub repo I've looked at — seven so far (superpowers, ECC, Agent-Reach, HyperFrames, Graphify, LearnHarness, modern-web-guidance), all in the same format. Every note opens with how much evidence is behind it — installed and measured, or only read the docs — plus a one-line verdict
 - [Go](learning/notes/go.md) — Picked up while building a real SQLite-backed service; notes are things that actually bit me
 - [Multi-model Workflow](learning/notes/multi-model-workflow.md) — Running Claude and Codex against the same work as independent reviewers
-- [Networking](learning/notes/networking.md) — Macro to micro: why the internet has no center, how fibre reaches a home, how the modem/router split evolved, then DHCP, NAT, port forwarding, and why double NAT hurts, how mesh VPNs like Tailscale sidestep the whole problem with UDP hole punching, and what actually separates DNS filtering, adblockers, VPNs and firewalls. Ends with 16 commonly-confused term pairs and a categorised acronym table. Written up after demoting a spare router to a plain switch; text diagrams throughout
+- [Networking](learning/notes/networking.md) — Macro to micro: why the internet has no center, how fibre reaches a home, how the modem/router split evolved, then DHCP, NAT, port forwarding, and why double NAT hurts, how mesh VPNs like Tailscale sidestep the whole problem with UDP hole punching (and how a DNS filter with a kernel driver can break MagicDNS), and what actually separates DNS filtering, adblockers, VPNs and firewalls. Ends with 16 commonly-confused term pairs and a categorised acronym table. Written up after demoting a spare router to a plain switch; text diagrams throughout
+- [IPv6 in Practice](learning/notes/ipv6.md) — What I learned getting a wired PC onto IPv6 behind a router demoted to a switch: link-local vs global, SLAAC and router advertisements, the cost of configuring it by hand, plus UPnP and why relay location matters more than relaying itself
 - [C Family](learning/notes/c-family.md) — C, C++, and related languages
 - [Java](learning/notes/java.md) — Primarily for Minecraft Mod development
 - [Python](learning/notes/python.md) — General purpose scripting

@@ -1,6 +1,8 @@
 # ECC 研究 — 「agent harness 效能最佳化系統」
 
 > 隸屬：[Agent harness 框架研究](README.md) · 狀態：🟡 初步調查 · 開始日期：2026-08-27
+> Repo：[affaan-m/ECC](https://github.com/affaan-m/ECC) · 類型：agent harness · 證據強度：🟡 只讀文件
+> 結論：部分採用，不整包裝，只單獨讀 3 份 skill · 索引：[Repo 閱讀筆記](../../learning/repos/README.md)
 
 > ⚠️ **證據強度：只讀過文件，沒安裝、沒實測。**
 > 這份的依據是 GitHub API 的 metadata、`README.md`、`the-shortform-guide.md`，

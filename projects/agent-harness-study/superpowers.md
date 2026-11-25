@@ -1,6 +1,8 @@
 # Superpowers 研究 — agentic skills 框架與開發方法論
 
 > 隸屬：[Agent harness 框架研究](README.md) · 狀態：🟡 進行中 · 開始日期：2026-08-15
+> Repo：[obra/superpowers](https://github.com/obra/superpowers) · 類型：agent harness · 證據強度：🟢 已安裝實測
+> 結論：採用，當主幹 · 索引：[Repo 閱讀筆記](../../learning/repos/README.md)
 
 ## 目標
 
